@@ -9,7 +9,7 @@ namespace StatePatternDemo.Automobile.Fueler
         int FuelPortion = 10;
         public void Refuel(TestAutomobile car)
         {
-            if (car.Fuel == car.FullTank)
+            if (car.Fuel > car.FullTank-this.FuelPortion)
             {
                 Console.WriteLine("Max fueling");
             }

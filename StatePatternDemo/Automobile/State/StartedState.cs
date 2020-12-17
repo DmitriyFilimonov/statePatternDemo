@@ -18,11 +18,18 @@ namespace StatePatternDemo.Automobile.State
             
             Console.WriteLine("Fuel level: " + car.Fuel);
 
+            string command = Console.ReadLine();
+            
 
-            if (car.Fuel == 0 || Console.ReadLine() == "stop")
+            if (car.Fuel == 0 || command == "stop")
             {
                 this.Stop(car);
             }
+            if (command=="start")
+            {
+                this.Start(car);
+            }
+            
         }
         public void Stop (TestAutomobile car)
         {
