@@ -9,13 +9,16 @@ namespace StatePatternDemo.Automobile.State
 
         public void Start(TestAutomobile car)
         {
-            if (car.Fuel > 0)
+            if (car.Fuel >= car.StartFuelPortion)
             {
-                car.Fuel--;
+                car.OverallState = new StoppedAndFueledState();
+                car.StartEngine();
             }
-            Console.WriteLine("Low fuel.");
+            else
+            {
+                Console.WriteLine("Low fuel.");
+            }
 
-            car.OverallState = new StoppedAndLowFuelState();
         }
         public void PerformEngine(TestAutomobile car)
         {

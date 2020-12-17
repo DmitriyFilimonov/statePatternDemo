@@ -7,21 +7,21 @@ namespace StatePatternDemo.Automobile.State
 {
     public class StartedState : IState
     {
+        
         public void Start(TestAutomobile car)
         {
             Console.WriteLine("Car is already started.");
         }
         public void PerformEngine(TestAutomobile car)
         {
-            Thread.Sleep(1000);
+            car.Fuel -= car.FuelFlowRate;
+            
             Console.WriteLine("Fuel level: " + car.Fuel);
 
-            car.Fuel-=car.FuelFlowRate;
 
-            if (car.Fuel == 0)
+            if (car.Fuel == 0 || Console.ReadLine() == "stop")
             {
                 this.Stop(car);
-
             }
         }
         public void Stop (TestAutomobile car)

@@ -1,5 +1,6 @@
 ﻿using System;
 using StatePatternDemo.Automobile;
+using StatePatternDemo.Automobile.Fueler;
 
 namespace StatePatternDemo
 {
@@ -8,6 +9,7 @@ namespace StatePatternDemo
         static void Main(string[] args)
         {
             TestAutomobile car = new TestAutomobile();
+            DefaultFueler fueler = new DefaultFueler();
 
             string command = "";
 
@@ -17,7 +19,7 @@ namespace StatePatternDemo
 
                 if(command=="fuel")
                 {
-                    car.Refuel();
+                    fueler.Refuel(car);
                 }
 
                 if (command=="start")
