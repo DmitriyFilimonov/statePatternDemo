@@ -1,0 +1,11 @@
+C:\Users\Дмитрий\source\repos\StatePatternDemo\StatePatternDemo\bin\Debug\netcoreapp3.1\StatePatternDemo.exe
+C:\Users\Дмитрий\source\repos\StatePatternDemo\StatePatternDemo\bin\Debug\netcoreapp3.1\StatePatternDemo.deps.json
+C:\Users\Дмитрий\source\repos\StatePatternDemo\StatePatternDemo\bin\Debug\netcoreapp3.1\StatePatternDemo.runtimeconfig.json
+C:\Users\Дмитрий\source\repos\StatePatternDemo\StatePatternDemo\bin\Debug\netcoreapp3.1\StatePatternDemo.runtimeconfig.dev.json
+C:\Users\Дмитрий\source\repos\StatePatternDemo\StatePatternDemo\bin\Debug\netcoreapp3.1\StatePatternDemo.dll
+C:\Users\Дмитрий\source\repos\StatePatternDemo\StatePatternDemo\bin\Debug\netcoreapp3.1\StatePatternDemo.pdb
+C:\Users\Дмитрий\source\repos\StatePatternDemo\StatePatternDemo\obj\Debug\netcoreapp3.1\StatePatternDemo.csprojAssemblyReference.cache
+C:\Users\Дмитрий\source\repos\StatePatternDemo\StatePatternDemo\obj\Debug\netcoreapp3.1\StatePatternDemo.AssemblyInfoInputs.cache
+C:\Users\Дмитрий\source\repos\StatePatternDemo\StatePatternDemo\obj\Debug\netcoreapp3.1\StatePatternDemo.AssemblyInfo.cs
+C:\Users\Дмитрий\source\repos\StatePatternDemo\StatePatternDemo\obj\Debug\netcoreapp3.1\StatePatternDemo.dll
+C:\Users\Дмитрий\source\repos\StatePatternDemo\StatePatternDemo\obj\Debug\netcoreapp3.1\StatePatternDemo.pdb
