@@ -4,7 +4,7 @@ using System.Text;
 
 namespace StatePatternDemo.Automobile.LowFuel
 {
-    public class FueledIFuel: IFuel
+    public class FueledIFuel//: IFuel
     {
         
         
@@ -12,8 +12,8 @@ namespace StatePatternDemo.Automobile.LowFuel
         {
             if (car.Fuel <= 5)
             {
-                car.FuelState = new LowIFuel();
-                car.Start();
+                //car.FuelState = new LowIFuel();
+                car.StartEngine();
             }
             else
             {

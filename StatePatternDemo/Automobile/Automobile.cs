@@ -3,38 +3,61 @@ using System.Collections.Generic;
 using System.Text;
 using StatePatternDemo.Automobile.LowFuel;
 using StatePatternDemo.Automobile.EngineResource;
+using StatePatternDemo.Automobile.State;
+using System.Threading;
 
 namespace StatePatternDemo.Automobile
 {
     public class TestAutomobile
     {
-        public IFuel FuelState;
+        public IState OverallState;
         public int Fuel = 0;
-        
+        public int StartFuelPortion = 5;
+        public int FuelFlowRate = 1;
+        public int FullTank = 40;
+
+
         public TestAutomobile()
         {
-            FuelState = new FueledIFuel();
+            
+            OverallState = new StoppedAndFueledState();
         }
         public void Refuel()
         {
-            if (Fuel == 40)
+            if (Fuel == FullTank)
             {
                 Console.WriteLine("Max fueling");
             }
-            else if (Fuel < 40)
+            else if (Fuel < FullTank)
             {
                 Fuel++;
-                Console.WriteLine("Fuel level:" + this.Fuel);
-                if (Fuel == 5)
+                Console.WriteLine("Fuel level:" + Fuel);
+                if (Fuel == StartFuelPortion)
                 {
-                    FuelState = new FueledIFuel();
+                    OverallState = new StoppedAndFueledState();
                 }
             }
             
         }
-        public void Start()
+
+        public void StartEngine()
         {
-            FuelState.Start(this);
+            OverallState.Start(this);
+        }
+
+        public void PerformEngine()
+        {
+            while (OverallState is StartedState)
+            {
+                
+                OverallState.PerformEngine(this);
+            }
+            return;
+        }
+        public void StopEngine()
+        {
+            OverallState.Stop(this);
+
         }
     }
 }

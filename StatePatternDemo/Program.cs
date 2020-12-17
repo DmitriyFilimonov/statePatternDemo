@@ -11,7 +11,7 @@ namespace StatePatternDemo
 
             string command = "";
 
-            while (command!="stop")
+            while (command!="end")
             {
                 command = Convert.ToString(Console.ReadLine());
 
@@ -22,7 +22,11 @@ namespace StatePatternDemo
 
                 if (command=="start")
                 {
-                    car.Start();
+                    car.StartEngine();
+                }
+                if (command=="stop")
+                {
+                    car.StopEngine();
                 }
             }
         }
